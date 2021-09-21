@@ -1,15 +1,11 @@
 import React from "react"
-import Cabelho from "./components/cabecalho/cabecalho"
-import Corpo from "./components/corpo/corpo"
-import Rodape from "./components/rodape/rodape"
+import {Home} from './pages/Home/index'
 
 
 export default function App() {
   return(
     <div className='container'>
-        <Cabelho/>
-        <Corpo/>
-        <Rodape/>
+        <Home />
     </div>
   )
 }

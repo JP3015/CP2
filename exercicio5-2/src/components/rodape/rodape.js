@@ -1,11 +1,9 @@
 import React from 'react'
 
-export default function Rodape() {
+export default function Rodape({rodape}) {
     return(
-
-        <footer>
-            <p><b>Endereço:</b> Av. Paulista, 1106-São Paulo</p>
-        </footer>
-
+    <Container>
+        <RodapeSection>{rodape}</RodapeSection>
+    </Container>
     )
 }
