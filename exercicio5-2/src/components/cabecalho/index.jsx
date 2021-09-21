@@ -1,10 +1,13 @@
 import React from 'react'
-import {Container,TitleSection,SubtitleSection} from "./styles"
+import {Container,ContainerTitle,TitleSection,ColorTitle,SubtitleSection} from "./styles"
 
-export default function Cabecalho({title,subtitle,customColor}) {
+export default function Cabecalho({title,letterTitle,subtitle,customColor}) {
     return(
         <Container>
-            <TitleSection customColor={customColor}>{title}</TitleSection>
+            <ContainerTitle> 
+                <TitleSection customColor={customColor}>{title} </TitleSection>
+                <ColorTitle> {letterTitle}</ColorTitle>
+            </ContainerTitle>
             <SubtitleSection>{subtitle}</SubtitleSection>        
         </Container>    
 

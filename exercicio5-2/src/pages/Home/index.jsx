@@ -1,42 +1,66 @@
 import React from "react";
 import Cabecalho from "../../components/cabecalho";
+import Rodape from "../../components/rodape"
 import { acompanhamentos, sabores } from "../../util/dto";
-import {Container, ContainerCabecalho, ContainerSabores, 
-  SaboresComponent, ContainerAcompanhamentos,
-   AcompanhamentosComponent,ContainerSection,ContainerSaboresDiversos,ContainerAcompanhemntosDiversos} from "../Home/styles"
+import {Container, 
+   ContainerCabecalho, 
+   ContainerSabores, 
+   SaboresComponent, 
+   ContainerAcompanhamentos,
+   AcompanhamentosComponent,
+   ContainerSection,
+   ContainerSaboresDiversos,
+   WrapSabores,
+   ContainerTitle,
+   WrapAcompanhamentos,
+   ContainerAcompanhementosDiversos,
+   ContainerRodape,
+   TituloSabores,
+   TituloAcompanhamentos,
+
+} from "../Home/styles"
 
 
 
 export function Home() {
    return(
-     <Container> 
-        <ContainerCabecalho>
-        <Cabecalho customColor="#3434" title="Sorveteria FIAP" subtitle="pera" />
-        </ContainerCabecalho>
-        <ContainerSection> 
-         <ContainerSaboresDiversos> 
-           <span> Sabores </span> 
-        {sabores.map(sabores =>
-           <ContainerSabores key={sabores.id} >
-              <SaboresComponent >
-                    {sabores.sabor}
-              </SaboresComponent> 
+      <Container> 
+         <ContainerCabecalho>
+            <Cabecalho title="Sorveteria" letterTitle="FIAP" subtitle="Aqui vendemos sorvetes de diversos sabores e de alta qualidade!" />
+         </ContainerCabecalho>
+         <ContainerSection> 
+         <WrapSabores> 
+            <ContainerTitle>
+         <TituloSabores> Sabores </TituloSabores> 
+         </ContainerTitle>
+            <ContainerSaboresDiversos> 
+         {sabores.map(sabores =>
+            <ContainerSabores key={sabores.id} >
+               <SaboresComponent >
+                  {sabores.sabor}
+               </SaboresComponent> 
             </ContainerSabores>
           
-          )} 
-         </ContainerSaboresDiversos> 
-         <ContainerAcompanhemntosDiversos> 
-           <span> Acompanhamentos </span>
-        {acompanhamentos.map(acompanhamentos => 
-        <ContainerAcompanhamentos key={acompanhamentos.id} >
+         )} 
+            </ContainerSaboresDiversos> 
+         </WrapSabores>  
+         <WrapAcompanhamentos> 
+            <TituloAcompanhamentos> Acompanhamentos </TituloAcompanhamentos>
+         <ContainerAcompanhementosDiversos> 
+         {acompanhamentos.map(acompanhamentos => 
+         <ContainerAcompanhamentos key={acompanhamentos.id} >
             <AcompanhamentosComponent>
-                {acompanhamentos.sabor}
+               {acompanhamentos.sabor}
             </AcompanhamentosComponent>   
-        </ContainerAcompanhamentos>
-        
-        )}
-        </ContainerAcompanhemntosDiversos>
-        </ContainerSection>     
-     </Container>
+         </ContainerAcompanhamentos>
+         )}
+         </ContainerAcompanhementosDiversos>
+         </WrapAcompanhamentos>   
+         </ContainerSection>
+         <ContainerRodape>
+            <Rodape rodape="O uso deste site está sujeito aos termos e condições do Termo de Uso e Política de privacidade.
+            © FIAP. Todos os direitos reservados."/>
+         </ContainerRodape>     
+      </Container>
    )
 }

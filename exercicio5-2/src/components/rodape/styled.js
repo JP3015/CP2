@@ -1,6 +1,12 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-export const RodapeSection = styled.p``;
-
+export const RodapeSection = styled.b`
+  font-size: 10px;
+  line-height: 17px;
+  color: "#000";
+`;
