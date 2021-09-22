@@ -30,6 +30,16 @@ export const WrapSabores = styled.div`
   background-color: #fff;
   border: 5px solid #808080;
   border-radius: 15px;
+  @media (min-width: 600px) and (max-width: 700px) {
+    height: 290px;
+    border: 1px solid #808080;
+    width: 200px;
+  }
+  @media (max-width: 600px) {
+    height: 220px;
+    border: 1px solid #808080;
+    width: 150px;
+  }
 `;
 
 export const WrapAcompanhamentos = styled(WrapSabores)``;
@@ -41,6 +51,10 @@ export const AcompanhamentosComponent = styled.h2`
   line-height: 30px;
   color: blueviolet;
   margin-bottom: 2px;
+  @media (max-width: 700px) {
+    font-size: 13px;
+    line-height: 20px;
+  }
 `;
 
 export const ContainerAcompanhamentos = styled(ContainerSabores)``;
@@ -58,6 +72,11 @@ export const TituloSabores = styled.h1`
   font-size: 31px;
   line-height: 35px;
   color: #964b00;
+
+  @media (max-width: 700px) {
+    font-size: 15px;
+    line-height: 25px;
+  }
 `;
 
 export const TituloAcompanhamentos = styled(TituloSabores)``;
@@ -68,8 +87,10 @@ export const ContainerSection = styled.div`
   justify-content: space-around;
   width: 100%;
   height: 300px;
-  @media (max-width: 800px) {
-    flex-direction: column;
+  @media (max-width: 700px) {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -79,6 +100,11 @@ export const ContainerSaboresDiversos = styled.div`
   width: 300px;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 600px) and @media (max-width: 700px) {
+    width: 150px;
+  }
 `;
 
-export const ContainerAcompanhementosDiversos = styled(ContainerSaboresDiversos)``;
+export const ContainerAcompanhementosDiversos = styled(
+  ContainerSaboresDiversos
+)``;

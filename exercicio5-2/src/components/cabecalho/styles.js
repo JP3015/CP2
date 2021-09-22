@@ -8,7 +8,7 @@ export const Container = styled.header`
 
 export const ContainerTitle = styled.div`
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
 `;
 
@@ -16,17 +16,21 @@ export const TitleSection = styled.h1`
   font-size: 45px;
   line-height: 52px;
   color: #ffa500;
-  margin-left:2px;
+  margin-left: 2px;
+  @media (max-width: 700px) {
+    font-size: 22.5px;
+    line-height: 25px;
+  }
 `;
 
-export const ColorTitle = styled.h1`
-font-size: 45px;
-  line-height: 52px;
-  color: #100f0f;
-  margin-left:2px;
+export const ColorTitle = styled(TitleSection)`
   color: blueviolet;
 `;
 
 export const SubtitleSection = styled.h2`
   font-size: 20px;
+  @media (max-width: 700px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
 `;
