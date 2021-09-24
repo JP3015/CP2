@@ -25,8 +25,8 @@ export function Sobre() {
         <ContainerDescription>
           <Description>
             Nossa loja possui atendimento bem avaliado e roupas de qualidade com
-            um preço acessível. Nosso integrantes são totalmente capacitados e
-            profissionais no que fazem, e apreciamos muito o trabalho que fazem.
+            um preço acessível. Nossos integrantes são totalmente capacitados e
+            profissionais, apreciamos muito o trabalho que fazem.
           </Description>
         </ContainerDescription>
         <ContainerSuTitle>
