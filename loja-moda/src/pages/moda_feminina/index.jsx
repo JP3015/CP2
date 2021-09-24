@@ -17,7 +17,6 @@ import {
   ContainerValueFooter,
   ValueFooter,
 } from './styles';
-
 import { Feminine } from '../../util/dto';
 
 export function ModaFemale() {

@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Home from '../../img/home.svg';
 import Man from '../../img/men.svg';
 import Woman from '../../img/woman.svg';
@@ -19,35 +20,43 @@ export function Menu() {
     <Container>
       <ContainerBody>
         <ContainerSection>
-          <ContainerIcons>
-            <Img src={Home} />
-          </ContainerIcons>
+          <Link to={'/'}>
+            <ContainerIcons>
+              <Img src={Home} />
+            </ContainerIcons>
+          </Link>
           <ContainerText>
             <Title>Home</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>
-          <ContainerIcons>
-            <Img src={Man} />
-          </ContainerIcons>
+          <Link to={'/masculino'}>
+            <ContainerIcons>
+              <Img src={Man} />
+            </ContainerIcons>
+          </Link>
           <ContainerText>
-            <Title>Masculina</Title>
+            <Title>Moda Masculina</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>
           <ContainerIcons>
-            <Img src={Woman} />
+            <Link to={'/feminina'}>
+              <Img src={Woman} />
+            </Link>
           </ContainerIcons>
           <ContainerText>
-            <Title>Feminina</Title>
+            <Title>Moda Feminina</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>
-          <ContainerIcons>
-            <Img src={Child} />
-          </ContainerIcons>
+          <Link to={'/crianca'}>
+            <ContainerIcons>
+              <Img src={Child} />
+            </ContainerIcons>
+          </Link>
           <ContainerText>
-            <Title>Infantil</Title>
+            <Title>Moda Infantil</Title>
           </ContainerText>
         </ContainerSection>
       </ContainerBody>

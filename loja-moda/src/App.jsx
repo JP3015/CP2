@@ -1,16 +1,13 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-// import { ModaFemale } from './pages/moda_feminina';
-// import { ModaChild } from './pages/modaInfantil';
-import { ModaMen } from './pages/modaMasculina';
-import { LayoutComponent } from '../src/components/layout';
+import React, { Fragment } from 'react';
+import { Routes } from './routes';
 import GlobalStyles from './GlobalStyles';
 
 export default function App() {
   return (
-    <LayoutComponent>
+    <Fragment>
       <GlobalStyles />
-      <ModaMen />
-    </LayoutComponent>
+      <Routes />
+    </Fragment>
   );
 }
