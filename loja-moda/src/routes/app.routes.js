@@ -4,7 +4,9 @@ import { Home } from '../pages/home';
 import { LayoutComponent } from '../components/layout';
 import { ModaFemale } from '../pages/moda_feminina';
 import { ModaMen } from '../pages/modaMasculina';
+import { Sobre } from '../pages/sobre';
 import { ModaChild } from '../pages/modaInfantil';
+
 export function AppRoutes() {
   return (
     <LayoutComponent>
@@ -13,6 +15,7 @@ export function AppRoutes() {
         <Route path="/feminina" component={ModaFemale} />
         <Route path="/masculino" component={ModaMen} />
         <Route path="/crianca" component={ModaChild} />
+        <Route path="/sobre" component={Sobre} />
       </Switch>
     </LayoutComponent>
   );

@@ -128,3 +128,27 @@ export const Child = [
     value: 'R$59,99',
   },
 ];
+
+export const dto_Home = [
+  {
+    id: 1,
+    imagem: FtM2,
+    title: 'Camiseta casual',
+    describe: 'Camiseta feito de seda',
+    value: 'R$ 150,23',
+  },
+  {
+    id: 2,
+    imagem: FtF5,
+    title: 'Vestido Carmin',
+    describe: 'Vestido para praia',
+    value: 'R$ 150,30',
+  },
+  {
+    id: 3,
+    imagem: FtI3,
+    title: 'Boné do Hulk',
+    describe: 'Boné de qualidade feito para arrecadar dinheiro para ongs.',
+    value: 'R$59,99',
+  },
+];

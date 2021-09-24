@@ -5,6 +5,7 @@ import Home from '../../img/home.svg';
 import Man from '../../img/men.svg';
 import Woman from '../../img/woman.svg';
 import Child from '../../img/children.svg';
+import About from '../../img/alert-circle.svg';
 import {
   Container,
   Title,
@@ -57,6 +58,16 @@ export function Menu() {
           </Link>
           <ContainerText>
             <Title>Moda Infantil</Title>
+          </ContainerText>
+        </ContainerSection>
+        <ContainerSection>
+          <Link to={'/sobre'}>
+            <ContainerIcons>
+              <Img src={About} />
+            </ContainerIcons>
+          </Link>
+          <ContainerText>
+            <Title>Sobre</Title>
           </ContainerText>
         </ContainerSection>
       </ContainerBody>
