@@ -6,4 +6,7 @@ export const Layout = styled.body`
   grid-template-rows: auto;
   grid-template-areas: 'AS BD';
   height: 100vh;
+  @media (max-width: 700px) {
+    grid-template-columns: 100px auto;
+  }
 `;

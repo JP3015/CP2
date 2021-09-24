@@ -9,19 +9,11 @@ import {
   ContainerDescriptionHeader,
   DescriptionHeader,
   ContainerBody,
-  ContainerSection,
-  ContainerProduct,
-  Img,
-  ContainerImg,
-  ContainerFooter,
-  ContainerTitleFooter,
-  TitleFooter,
-  ContainerDescription,
-  DescriptionFooter,
-  ContainerValueFooter,
-  ValueFooter,
+  ContainerRodape,
 } from './styles';
+import { Rodape } from '../../components/rodape';
 import { dto_Home } from '../../util/dto';
+import { Card } from '../../components/card';
 
 export function Home() {
   return (
@@ -31,7 +23,7 @@ export function Home() {
           <Title>Bem vindo</Title>
         </ContainerTitle>
         <ContainerWelcome>
-          <Welcome>Boa tarde</Welcome>
+          <Welcome>Roupas para todos os estilos</Welcome>
         </ContainerWelcome>
         <ContainerDescriptionHeader>
           <DescriptionHeader>Roupas em alta!!</DescriptionHeader>
@@ -39,24 +31,13 @@ export function Home() {
       </ContainerHeader>
       <ContainerBody>
         {dto_Home.map((itens) => (
-          <ContainerSection key={itens.id}>
-            <ContainerProduct>
-              <ContainerImg>
-                <Img src={itens.imagem} />
-              </ContainerImg>
-              <ContainerFooter>
-                <ContainerTitleFooter>
-                  <TitleFooter>{itens.title}</TitleFooter>
-                </ContainerTitleFooter>
-                <ContainerDescription>
-                  <DescriptionFooter>{itens.describe}</DescriptionFooter>
-                </ContainerDescription>
-                <ContainerValueFooter>
-                  <ValueFooter>{itens.value}</ValueFooter>
-                </ContainerValueFooter>
-              </ContainerFooter>
-            </ContainerProduct>
-          </ContainerSection>
+          <Card
+            key={itens.id}
+            imagem={itens.imagem}
+            describe={itens.describe}
+            value={itens.value}
+            title={itens.title}
+          />
         ))}
       </ContainerBody>
     </Container>

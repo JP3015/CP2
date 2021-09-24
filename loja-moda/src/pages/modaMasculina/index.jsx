@@ -1,23 +1,8 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Masculine } from '../../util/dto';
-import {
-  Container,
-  ContainerTitle,
-  Title,
-  ContainerSection,
-  ContainerBody,
-  ContainerProduct,
-  ContainerImg,
-  Img,
-  ContainerFooter,
-  ContainerTitleFooter,
-  TitleFooter,
-  ContainerDescription,
-  DescriptionFooter,
-  ContainerValueFooter,
-  ValueFooter,
-} from './styles';
+import { Card } from '../../components/card';
+import { Rodape } from '../../components/rodape';
+import { Container, ContainerTitle, Title, ContainerBody, ContainerRodape } from './styles';
 
 export function ModaMen() {
   return (
@@ -27,24 +12,14 @@ export function ModaMen() {
       </ContainerTitle>
       <ContainerBody>
         {Masculine.map((itens) => (
-          <ContainerSection key={itens.id}>
-            <ContainerProduct>
-              <ContainerImg>
-                <Img src={itens.imagem} />
-              </ContainerImg>
-              <ContainerFooter>
-                <ContainerTitleFooter>
-                  <TitleFooter>{itens.title}</TitleFooter>
-                </ContainerTitleFooter>
-                <ContainerDescription>
-                  <DescriptionFooter>{itens.describe}</DescriptionFooter>
-                </ContainerDescription>
-                <ContainerValueFooter>
-                  <ValueFooter>{itens.value}</ValueFooter>
-                </ContainerValueFooter>
-              </ContainerFooter>
-            </ContainerProduct>
-          </ContainerSection>
+          <Card
+            key={itens.id}
+            id={itens.id}
+            imagem={itens.imagem}
+            describe={itens.describe}
+            value={itens.value}
+            title={itens.title}
+          />
         ))}
       </ContainerBody>
     </Container>

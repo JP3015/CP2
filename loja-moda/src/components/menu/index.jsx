@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Home from '../../img/home.svg';
@@ -37,7 +36,7 @@ export function Menu() {
             </ContainerIcons>
           </Link>
           <ContainerText>
-            <Title>Moda Masculina</Title>
+            <Title>Masculino</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>
@@ -47,7 +46,7 @@ export function Menu() {
             </Link>
           </ContainerIcons>
           <ContainerText>
-            <Title>Moda Feminina</Title>
+            <Title>Feminino</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>
@@ -57,7 +56,7 @@ export function Menu() {
             </ContainerIcons>
           </Link>
           <ContainerText>
-            <Title>Moda Infantil</Title>
+            <Title>Infantil</Title>
           </ContainerText>
         </ContainerSection>
         <ContainerSection>

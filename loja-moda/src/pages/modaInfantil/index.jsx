@@ -1,23 +1,8 @@
 import React from 'react';
-import {
-  Container,
-  ContainerTitle,
-  Title,
-  ContainerSection,
-  ContainerBody,
-  ContainerProduct,
-  ContainerImg,
-  Img,
-  ContainerFooter,
-  ContainerTitleFooter,
-  TitleFooter,
-  ContainerDescription,
-  DescriptionFooter,
-  ContainerValueFooter,
-  ValueFooter,
-} from './styles';
-
+import { Container, ContainerTitle, Title, ContainerBody, ContainerRodape } from './styles';
 import { Child } from '../../util/dto';
+import { Card } from '../../components/card';
+import { Rodape } from "../../components/rodape"
 
 export function ModaChild() {
   return (
@@ -27,24 +12,13 @@ export function ModaChild() {
       </ContainerTitle>
       <ContainerBody>
         {Child.map((itens) => (
-          <ContainerSection key={itens.id}>
-            <ContainerProduct>
-              <ContainerImg>
-                <Img src={itens.imagem} />
-              </ContainerImg>
-              <ContainerFooter>
-                <ContainerTitleFooter>
-                  <TitleFooter>{itens.title}</TitleFooter>
-                </ContainerTitleFooter>
-                <ContainerDescription>
-                  <DescriptionFooter>{itens.describe}</DescriptionFooter>
-                </ContainerDescription>
-                <ContainerValueFooter>
-                  <ValueFooter>{itens.value}</ValueFooter>
-                </ContainerValueFooter>
-              </ContainerFooter>
-            </ContainerProduct>
-          </ContainerSection>
+          <Card
+            key={itens.id}
+            imagem={itens.imagem}
+            describe={itens.describe}
+            value={itens.value}
+            title={itens.title}
+          />
         ))}
       </ContainerBody>
     </Container>
