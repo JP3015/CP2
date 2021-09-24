@@ -8,7 +8,6 @@ export const Container = styled.aside`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 `;
 
@@ -17,6 +16,7 @@ export const ContainerBody = styled.div`
   height: 70%;
   flex-direction: column;
   justify-content: space-between;
+  margin: 50px 0px;
 `;
 
 export const ContainerSection = styled.div`
